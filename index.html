@@ -1,341 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Pal Diyora Resume</title>
+    <meta charset="UTF-8">
+    <title>Pal Diyora Resume</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-<style>
+    <style>
+        .skill-bar {
+            width: 0;
+            animation: fillBar 1.5s forwards;
+        }
 
-.skill-bar{
-width:0;
-animation: fillBar 1.5s forwards;
-}
+        @keyframes fillBar {
+            from {
+                width: 0
+            }
 
-@keyframes fillBar{
-from{width:0}
-to{width:var(--width)}
-}
-
-</style>
+            to {
+                width: var(--width)
+            }
+        }
+    </style>
 
 </head>
 
 <body class="bg-gray-100 p-10 font-sans">
 
-<!-- DOWNLOAD BUTTON -->
-
-<div class="text-center mb-8">
-<button onclick="downloadPDF()" 
-class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition font-semibold">
-Download Resume PDF
-</button>
-</div>
-
-<!-- RESUME -->
-
-<div id="resume" class="max-w-5xl mx-auto bg-white shadow-2xl rounded-xl overflow-hidden">
-
-<div class="grid grid-cols-3">
-
-<!-- LEFT SIDEBAR -->
-
-<div class="bg-blue-600 text-white p-8">
-
-<div class="flex flex-col items-center text-center">
-
-<img src="profile.jpeg" class="w-32 h-32 rounded-full border-4 border-white object-cover shadow-lg">
-
-<h1 class="text-2xl font-bold mt-4">
-Pal Diyora
-</h1>
-
-<p class="text-blue-200">
-MERN Stack Developer
-</p>
-
-</div>
-
-<div class="mt-8 space-y-2 text-sm">
-
-<p>📍 Surat, India 394101</p>
-<a href="tel:+916355483425" class="text-white hover:underline ">📞 +91 63 5548 3425</a> <br>
-<a href="mailto:paldiyoraa@gmail.com" class="text-white hover:underline">✉ paldiyoraa@gmail.com</a> <br>
-<a href="https://linkedin.com/in/pal-diyora-7aa7873a6" target="_blank" class="text-white hover:underline">🔗 linkedin.com/in/pal-diyora-7aa7873a6</a>
-
-</div>
-
-<!-- SKILLS -->
-
-<h2 class="mt-10 text-lg font-semibold border-b border-blue-300 pb-2">
-Skills
-</h2>
-
-<div class="space-y-4 mt-4 text-sm">
-
-<div>
-<div class="flex justify-between">
-<span>Javascript</span>
-<span>99%</span>
-</div>
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:99%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>CSS</span>
-<span>96%</span>
-</div>
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:96%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>HTML</span>
-<span>98%</span>
-</div>
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:98%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>Front end web development</span>
-<span>90%</span>
-</div>
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:90%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>React.js experience</span>
-<span>89%</span>
-</div>
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:89%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>HTML5 expertise</span>
-<span>99%</span>
-</div>
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:99%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>CSS proficiency</span>
-<span>99%</span>
-</div>
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:99%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>Bootstrap framework</span>
-<span>99%</span>
-</div>
-
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:99%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>Tailwind Css</span>
-<span>98%</span>
-</div>
-
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:98%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>Node.js basics</span>
-<span>40%</span>
-</div>
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:40%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>Deployment</span>
-<span>45%</span>
-</div>
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:45%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>Web design</span>
-<span>100%</span>
-</div>
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:100%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>Responsive design</span>
-<span>99%</span>
-</div>
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:99%"></div>
-</div>
-</div>
-
-<div>
-<div class="flex justify-between">
-<span>Git proficiency</span>
-<span>40%</span>
-</div>
-<div class="w-full bg-blue-300 h-2 rounded-full">
-<div class="bg-white h-2 rounded-full skill-bar" style="--width:40%"></div>
-</div>
-</div>
-
-</div>
-
-<!-- LANGUAGES -->
-
-<h2 class="mt-10 text-lg font-semibold border-b border-blue-300 pb-2">
-Languages
-</h2>
-
-<p class="text-sm mt-3">Hindi – Bilingual or Proficient (C2)</p>
-<p class="text-sm">English – Bilingual or Proficient (C2)</p>
-
-</div>
-
-<!-- RIGHT CONTENT -->
-
-<div class="col-span-2 p-10">
-
-<h2 class="text-xl font-bold text-gray-800 border-b pb-2">
-Profile
-</h2>
-
-<p class="text-gray-600 mt-4 text-sm leading-relaxed">
-Front End Development professional skilled in HTML, CSS, JavaScript, and React.
-Known for strong team collaboration, adaptability, and delivering high-quality
-results. Adept at creating intuitive user interfaces and enhancing user experience.
-Reliable, flexible, and driven by passion for innovative web technologies.
-</p>
-
-<p class="text-gray-600 mt-3 text-sm leading-relaxed">
-As web development professional, adept at crafting intuitive and visually appealing
-user interfaces. Demonstrates strong focus on teamwork and achieving project
-milestones. Reliable and adaptable, with proficiency in HTML, CSS, JavaScript,
-and modern frameworks such as React.
-</p>
-
-<!-- LINKEDIN -->
-
-<h2 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">
-LinkedIn Profiles
-</h2>
-
-<a href="https://linkedin.com/in/pal-diyora-7aa7873a6"
-class="text-blue-600 text-sm hover:underline">
-linkedin.com/in/pal-diyora-7aa7873a6
-</a>
-
-<!-- EXPERIENCE -->
-
-<h2 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">
-Experience
-</h2>
-
-<h3 class="font-semibold mt-3">
-Front End Developer – Surat, India
-</h3>
-
-<ul class="list-disc ml-5 text-sm text-gray-600 mt-2 space-y-1">
-
-<li>Utilized HTML, CSS, and JavaScript to create visually appealing and responsive web pages.</li>
-<li>Coded using HTML, CSS, and JavaScript for mobile and desktop platforms.</li>
-<li>Worked closely with UX/UI designers to translate designs into applications.</li>
-<li>Used Git version control to manage development changes.</li>
-<li>Optimized website performance and mobile responsiveness.</li>
-<li>Designed layouts to improve usability and performance.</li>
-<li>Built landing pages optimized for cross-browser compatibility.</li>
-<li>Developed web forms with validation and error handling.</li>
-
-</ul>
-
-<p class="mt-4 font-semibold text-gray-700">
-Backend Developer Intern
-</p>
-
-<!-- EDUCATION -->
-
-<h2 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">
-Education
-</h2>
-
-<p class="text-sm text-gray-600 mt-2">
-No Degree: IT Student<br>
-Creative Design & Multimedia Institute – Surat, India
-</p>
-
-<!-- PERSONAL -->
-
-<h2 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">
-Personal Details
-</h2>
-
-<p class="text-sm text-gray-600 mt-2">Date of Birth: 16-01-2009</p>
-<p class="text-sm text-gray-600">Marital Status: Single</p>
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-function downloadPDF(){
-
-const element = document.getElementById('resume');
-
-const opt = {
-margin:0,
-filename:'Pal_Diyora_Resume.pdf',
-image:{ type:'jpeg', quality:1 },
-html2canvas:{ scale:2 },
-jsPDF:{ unit:'mm', format:'a4', orientation:'portrait'}
-};
-
-html2pdf().set(opt).from(element).save();
-
-}
-
-</script>
+    <!-- DOWNLOAD BUTTON -->
+
+    <div class="text-center mb-8">
+        <button onclick="downloadPDF()"
+            class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition font-semibold">
+            Download Resume PDF
+        </button>
+    </div>
+
+    <!-- RESUME -->
+
+    <div id="resume" class="max-w-5xl mx-auto bg-white shadow-2xl rounded-xl overflow-hidden">
+
+        <div class="grid grid-cols-3">
+
+            <!-- LEFT SIDEBAR -->
+
+            <div class="bg-blue-600 text-white p-8">
+
+                <div class="flex flex-col items-center text-center">
+
+                    <img src="profile.jpeg" class="w-32 h-32 rounded-full border-4 border-white object-cover shadow-lg">
+
+                    <h1 class="text-2xl font-bold mt-4">
+                        Pal Diyora
+                    </h1>
+
+                    <p class="text-blue-200">
+                        MERN Stack Developer
+                    </p>
+
+                </div>
+
+                <div class="mt-8 space-y-2 text-sm">
+
+                    <p>📍 Surat, India 394101</p>
+                    <a href="tel:+916355483425" class="text-white hover:underline ">📞 +91 63 5548 3425</a> <br>
+                    <a href="mailto:paldiyoraa@gmail.com" class="text-white hover:underline">✉ paldiyoraa@gmail.com</a>
+                    <br>
+                    <a href="https://linkedin.com/in/pal-diyora-7aa7873a6" target="_blank"
+                        class="text-white hover:underline">🔗 linkedin.com/in/pal-diyora-7aa7873a6</a>
+
+                </div>
+
+                <!-- SKILLS -->
+
+                <h2 class="mt-10 text-lg font-semibold border-b border-blue-300 pb-2">
+                    Skills
+                </h2>
+
+                <div class="space-y-4 mt-4 text-sm">
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>C</span>
+                            <span>99%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:99%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>C++</span>
+                            <span>99%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:99%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>HTML</span>
+                            <span>98%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:98%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>HTML5</span>
+                            <span>98%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:98%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>CSS</span>
+                            <span>96%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:96%"></div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>CSS proficiency</span>
+                            <span>99%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:99%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>Bootstrap framework</span>
+                            <span>99%</span>
+                        </div>
+
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:99%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>Tailwind Css</span>
+                            <span>98%</span>
+                        </div>
+
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:98%"></div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>Javascript</span>
+                            <span>99%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:99%"></div>
+                        </div>
+                    </div>
+
+                           <div>
+                        <div class="flex justify-between">
+                            <span>Web design</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:100%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>Responsive design</span>
+                            <span>99%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:99%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>Prompt Engineering</span>
+                            <span>99%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:99%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>Front end web development</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:90%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>React.js experience</span>
+                            <span>89%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:89%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>Node.js basics</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:40%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>Deployment</span>
+                            <span>45%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:45%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between">
+                            <span>Git proficiency</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="w-full bg-blue-300 h-2 rounded-full">
+                            <div class="bg-white h-2 rounded-full skill-bar" style="--width:40%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- LANGUAGES -->
+
+                <h2 class="mt-10 text-lg font-semibold border-b border-blue-300 pb-2">
+                    Languages
+                </h2>
+
+                <p class="text-sm mt-3">Hindi – Bilingual or Proficient (C2)</p>
+                <p class="text-sm">English – Bilingual or Proficient (C2)</p>
+
+            </div>
+
+            <!-- RIGHT CONTENT -->
+
+            <div class="col-span-2 p-10">
+
+                <h2 class="text-xl font-bold text-gray-800 border-b pb-2">
+                    Profile
+                </h2>
+
+                <p class="text-gray-600 mt-4 text-sm leading-relaxed">
+                    Front End Development professional skilled in HTML, CSS, JavaScript, and React.
+                    Known for strong team collaboration, adaptability, and delivering high-quality
+                    results. Adept at creating intuitive user interfaces and enhancing user experience.
+                    Reliable, flexible, and driven by passion for innovative web technologies.
+                </p>
+
+                <p class="text-gray-600 mt-3 text-sm leading-relaxed">
+                    As web development professional, adept at crafting intuitive and visually appealing
+                    user interfaces. Demonstrates strong focus on teamwork and achieving project
+                    milestones. Reliable and adaptable, with proficiency in HTML, CSS, JavaScript,
+                    and modern frameworks such as React.
+                </p>
+
+                <!-- LINKEDIN -->
+
+                <h2 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">
+                    LinkedIn Profiles
+                </h2>
+
+                <a href="https://linkedin.com/in/pal-diyora-7aa7873a6" class="text-blue-600 text-sm hover:underline">
+                    linkedin.com/in/pal-diyora-7aa7873a6
+                </a>
+
+                <!-- EXPERIENCE -->
+
+                <h2 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">
+                    Experience
+                </h2>
+
+                <h3 class="font-semibold mt-3">
+                    Front End Developer – Surat, India
+                </h3>
+
+                <ul class="list-disc ml-5 text-sm text-gray-600 mt-2 space-y-1">
+
+                    <li>Utilized HTML, CSS, and JavaScript to create visually appealing and responsive web pages.</li>
+                    <li>Coded using HTML, CSS, and JavaScript for mobile and desktop platforms.</li>
+                    <li>Worked closely with UX/UI designers to translate designs into applications.</li>
+                    <li>Used Git version control to manage development changes.</li>
+                    <li>Optimized website performance and mobile responsiveness.</li>
+                    <li>Designed layouts to improve usability and performance.</li>
+                    <li>Built landing pages optimized for cross-browser compatibility.</li>
+                    <li>Developed web forms with validation and error handling.</li>
+
+                </ul>
+
+                <p class="mt-4 font-semibold text-gray-700">
+                    Backend Developer Intern
+                </p>
+
+                <!-- EDUCATION -->
+
+                <h2 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">
+                    Education
+                </h2>
+
+                <p class="text-sm text-gray-600 mt-2">
+                    No Degree: IT Student<br>
+                    Creative Design & Multimedia Institute – Surat, India
+                </p>
+
+                <!-- PERSONAL -->
+
+                <h2 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">
+                    Personal Details
+                </h2>
+
+                <p class="text-sm text-gray-600 mt-2">Date of Birth: 16-01-2009</p>
+                <p class="text-sm text-gray-600">Marital Status: Single</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function downloadPDF() {
+
+            const element = document.getElementById('resume');
+
+            const opt = {
+                margin: 0,
+                filename: 'Pal_Diyora_Resume.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            html2pdf().set(opt).from(element).save();
+
+        }
+
+    </script>
 
 </body>
-</html>
 
+</html>
